@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="theme-color" content="#111827">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harivens | Digital Agency</title>
@@ -1120,6 +1122,110 @@
     .hero-btns { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
 }
 
+/* ============================= */
+/* MOBILE OPTIMIZATION */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .hero-headline {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+        line-height: 1.05;
+    }
+
+    .hero-capabilities {
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        gap: 10px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: auto;
+    }
+
+    .btn-primary-hero,
+    .btn-secondary-hero {
+        width: 100%;
+    }
+
+    /* Stats Section */
+    .stats-grid-enhanced {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    /* Service Cards */
+    #service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .list-row {
+        padding: 25px;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .cta-heading {
+        font-size: 1.6rem;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* News Cards */
+    .news-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-thumb {
+        width: 100%;
+        height: 180px;
+    }
+
+    /* Testimonials */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Drawer Fix */
+    .drawer {
+        width: 100%;
+        max-width: 100%;
+        padding: 40px 20px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .social-wrapper {
+        justify-content: center;
+    }
+
+}
+
     </style>
 </head>
 <body>
@@ -1460,7 +1566,7 @@ mobileMenuBtn.addEventListener('click', () => {
 });
 
 // 3. Close mobile menu on link click
-document.querySelectorAll('.mobile-menu a').forEach(link => {
+document.querySelectorAll('.mobile-menu a, .mobile-menu button').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
     });
